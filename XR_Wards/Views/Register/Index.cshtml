@@ -1,27 +1,30 @@
-@model XR_Wards.CommonTypes.Registration
+@model RegisterModel
 
 @{
     ViewData["Title"] = "Register";
 }
 
 <div class="text-center">
+    <p>
+        @Model.Message
+    </p>
     <form method="post">
-        <div asp-validation-summary="ModelOnly" class="text-danger" />
+        <div asp-validation-summary="ModelOnly" class="text-danger"/>
         <div>
-            <label asp-for="FirstName">First Name</label>
-            <input asp-for="FirstName"  />
+            <label asp-for="Registration.FirstName">First Name</label>
+            <input asp-for="Registration.FirstName"/>
         </div>
         <div>
-            <label asp-for="LastName">Last Name</label>
-            <input asp-for="LastName"  />
+            <label asp-for="Registration.LastName">Last Name</label>
+            <input asp-for="Registration.LastName"/>
         </div>
         <div>
-            <label asp-for="Email">Email</label>
-            <input asp-for="Email"  />
+            <label asp-for="Registration.Email">Email</label>
+            <input asp-for="Registration.Email"/>
         </div>
         <div>
             <label>Confirm</label>
-            <input asp-for="ConfirmStoringEmail"  />
+            <input asp-for="Registration.ConfirmStoringEmail"/>
         </div>
 
         <input type="submit" value="Register"/>
